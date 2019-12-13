@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+clog -t "nodejs: Build process starts ..."
+
+# add image schema
+lcs-cli schema add --section nodejs
+
+# Create the node user and group
+adduser -h /home/node -s /bin/bash -D node
+passwd -d node
+# Add node to lcs group
+addgroup node lcs
+clog -i "nodejs: node user and group created."
+
+# change node to ownership of ${APP_DIR}
+chown -R node:lcs ${APP_DIR}
+# config for node user
+sudo -HEu node npm config set registry https://registry.npm.taobao.org
+clog -i "nodejs: Fixed ownership of ${APP_DIR}"
+
+# complete
+clog -t "nodejs: Build process completed."

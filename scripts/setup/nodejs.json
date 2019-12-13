@@ -1,0 +1,24 @@
+{
+  "registry": "leadstec",
+  "image": "nodejs",
+  "version": "",
+  "build": "",
+  "schema": "20171213",
+  "lcs_schema": "1.6.0",
+  "permissions": [
+    {
+      "chmod": "775",
+      "chown": "node:lcs",
+      "path": "${APP_DIR}"
+    }
+  ],
+  "envs": [
+    {
+      "name": "NODE_ENV",
+      "default": "production",
+      "replacements": []
+    }
+  ],
+  "secrets": [],
+  "storages": []
+}

@@ -1,0 +1,30 @@
+version: "3.7"
+# Set -arch=_aarch64 for arm build
+services:
+  nodejs:
+    build:
+      context: .
+      args:
+#        - arch=_aarch64
+        - version=10.16.3
+        - build=dev
+    image: leadstec/nodejs:10.16.3
+    ports:
+      - "50401:3000"
+    volumes:
+      - ~/volumes-data/nodejs.local/log:/data/log
+      - ~/volumes-data/nodejs.local/persist:/data/persist
+    env_file:
+      - ./env
+    environment:
+      - EMAIL=
+      - LCS_LOG_LEVEL=debug
+      - NODE_ENV=development
+    secrets:
+      - lcs
+    hostname: nodejs.local
+    container_name: nodejs.local
+
+secrets:
+  lcs:
+    file: ~/.vcubi/lcs
