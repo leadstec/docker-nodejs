@@ -3,10 +3,8 @@
 # DOCKER-VERSION    19.03
 # Copyright         (C) 2020 LEADSTEC Solutions. All rights reserved.
 #
-ARG arch=
-FROM leadstec/alpine${arch}:3.10.3
-
-ARG version=10
+FROM leadstec/alpine:3.11.2
+ARG version=12
 ARG build=dev
 
 LABEL version="${version}-${build}" \

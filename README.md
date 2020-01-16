@@ -2,6 +2,9 @@
 
 ### CHANGELOG
 
+**2020/01/16**
+* Update - NodeJS 12.14.0
+
 **2019/12/12**
 * NodeJS 10.16.3
 * Based on Alpine 3.10.3

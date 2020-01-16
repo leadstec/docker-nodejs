@@ -1,19 +1,19 @@
 version: "3.7"
-# Set -arch=_aarch64 for arm build
+
 services:
+
   nodejs:
     build:
       context: .
       args:
-#        - arch=_aarch64
-        - version=10.16.3
+        - version=12.14.0
         - build=dev
-    image: leadstec/nodejs:10.16.3
+    image: leadstec/nodejs:12.14.0
     ports:
       - "50401:3000"
     volumes:
-      - ~/volumes-data/nodejs.local/log:/data/log
-      - ~/volumes-data/nodejs.local/persist:/data/persist
+      - ~/volumes/nodejs.local/log:/data/log
+      - ~/volumes/nodejs.local/persist:/data/persist
     env_file:
       - ./env
     environment:
