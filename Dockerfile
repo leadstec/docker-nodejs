@@ -1,14 +1,16 @@
 #
-# AUTHOR            Frank,H.L.Lai <frank@leadstec.com>
-# DOCKER-VERSION    19.03
-# Copyright         (C) 2020 LEADSTEC Solutions. All rights reserved.
+# Author            Frank,H.L.Lai <frank@leadstec.com>
+# Docker Version    19.03
+# Website           https://www.leadstec.com
+# Copyright         (C) 2020 LEADSTEC Systems. All rights reserved.
 #
-FROM leadstec/alpine:3.11.2
+ARG arch=
+FROM leadstec.tencentcloudcr.com/leadstec/alpine${arch}:3.12.0
 ARG version=12
 ARG build=dev
 
 LABEL version="${version}-${build}" \
-    description="NodeJS image for VCubi" \
+    description="NodeJS image for VCubi platform" \
     maintainer="Frank,H.L.Lai <frank@leadstec.com>"
 
 # set environment variables

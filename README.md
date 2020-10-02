@@ -1,6 +1,35 @@
-使用文档请参考 http://docs.fay.cloud/image/nodejs/
+# Nodejs image for VCubi Platform
 
-### CHANGELOG
+![Nodejs](https://img.shields.io/badge/nodejs-12.18.4,_latest-blue)
+![x86_64](https://img.shields.io/badge/x86_64-supported-brightgreen)
+![aarch64](https://img.shields.io/badge/aarch64-supported-brightgreen)
+
+## How to Use
+
+### Pull image
+    # from Docker Hub
+    docker pull leadstec/nodejs:[tag]
+    docker pull leadstec/nodejs-aarch64:[tag]
+    # from Tencent CR
+    docker pull leadstec.tencentcloudcr.com/leadstec/nodejs:[tag]
+    docker pull leadstec.tencentcloudcr.com/leadstec/nodejs-aarch64:[tag]
+
+### Build image
+    docker-compose build nodejs
+
+### LCS Schema & ENV
+
+| ENV Variable              | Description               | Default | Accept Values |
+|---------------------------|---------------------------|---------|---------------|
+| NODE_ENV                  |                           | development |     |
+
+## Image Structure Test
+    container-structure-test test --image leadstec/nodejs:tag --config tests/nodejs.yaml
+
+## CHANGELOG
+
+**2020/10/02**
+* Update: Nodejs 12.18.4
 
 **2020/01/16**
 * Update - NodeJS 12.14.0
