@@ -5,11 +5,7 @@ services:
   nodejs:
     build:
       context: .
-      args:
-        - arch=
-        - version=12.18.4
-        - build=dev
-    image: leadstec.tencentcloudcr.com/leadstec/nodejs:12.18.4
+    image: leadstec/nodejs:12
     ports:
       - "50401:3000"
     volumes:
