@@ -29,5 +29,5 @@ jobs:
           push: true
           tags: |
             leadstec/nodejs:latest
-            leadstec/nodejs:12
-            leadstec/nodejs:12.20.1
+            leadstec/nodejs:14
+            leadstec/nodejs:14.16.1

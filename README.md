@@ -1,6 +1,6 @@
 # Nodejs image for VCubi Platform
 
-![Version](https://img.shields.io/badge/NodeJS-12.20.1-blue)
+![Version](https://img.shields.io/badge/NodeJS-14.16.1-blue)
 ![Arch](https://img.shields.io/badge/Arch-amd64,_arm64-brightgreen)
 ![Workflow](https://github.com/leadstec/docker-nodejs/workflows/ci/badge.svg)
 

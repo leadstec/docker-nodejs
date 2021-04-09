@@ -1,5 +1,8 @@
 # CHANGELOG
 
+**2021/04/10**
+* Update: NodeJS v14.16.1
+
 **2021/01/11**
 * Update: Nodejs 12.20.1
 * Update: Move to Github Actions for CI

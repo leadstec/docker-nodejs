@@ -5,7 +5,7 @@ services:
   nodejs:
     build:
       context: .
-    image: leadstec/nodejs:12
+    image: local/nodejs:14
     ports:
       - "50401:3000"
     volumes:
